@@ -21,6 +21,28 @@ class HelloWorld {
     }
 }
 ```
+4) How to find duplicate characters in a string in Java?
+
+Write a Java program to find duplicate characters and their count in a given string. For example, in a string “Better Butter”, duplicate characters and their count is t : 4, e : 3, r : 2 and B : 2. [Solution]
+```java
+import java.util.stream.Stream;
+import java.util.stream.Collectors;
+import java.util.function.Function;
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        String str = "Butter Better";
+        
+        Map<Character,Long> map = str.chars().
+        mapToObj(c->(char)c).
+        collect(Collectors.groupingBy(Function.identity(),
+        Collectors.counting()));
+        
+        System.out.println(map);
+   }
+}
+```
 
 3) How do you remove all white spaces from a string in Java?
 
