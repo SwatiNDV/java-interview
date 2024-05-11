@@ -1,7 +1,7 @@
 # java-interview
-4) How to find duplicate characters in a string in Java?
+3) How do you remove all white spaces from a string in Java?
 
-Write a Java program to find duplicate characters and their count in a given string. For example, in a string “Better Butter”, duplicate characters and their count is t : 4, e : 3, r : 2 and B : 2. [Solution]
+The bundle of Java programming interview questions is incomplete without the questions on strings. You will face many questions on string handling in your interview. I have listed some of them in this post. It is one of them. [Solution]
 ```java
 import java.util.stream.Stream;
 import java.util.stream.Collectors;
