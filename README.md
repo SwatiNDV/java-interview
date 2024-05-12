@@ -1,7 +1,7 @@
 # java-interview
 1) How to reverse a string in Java?
 
-Any technical interview is not complete without a question on recursive concept. This question is one of them. You have to write a Java program to reverse a given string using recursive method. [Solution]
+ This question is one of them. You have to write a Java program to reverse a given string using recursive method. [Solution]
 ```java 
 import java.util.stream.Stream;
 import java.util.stream.Collectors;
@@ -25,7 +25,7 @@ class HelloWorld {
 4) How to find duplicate characters in a string in Java?
 
 Write a Java program to find duplicate characters and their count in a given string. For example, in a string “Better Butter”, duplicate characters and their count is t : 4, e : 3, r : 2 and B : 2. [Solution]
-```java 8
+```java
 import java.util.stream.Stream;
 import java.util.stream.Collectors;
 import java.util.function.Function;
@@ -69,7 +69,6 @@ class HelloWorld {
         }
    }
 }
-```
 ```
 
 3) How do you remove all white spaces from a string in Java?
