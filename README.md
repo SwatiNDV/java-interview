@@ -203,6 +203,68 @@ class HelloWorld {
 
 I think array related programs along with string handling programs are the most asked Java programs in interview. In this program, I have discussed five methods to find duplicate elements in the given array. [Solution]
 ```java
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+       
+        int[] arr = {1,2,3,4,5,6};
+        
+        Set<Integer> uniqueSet = new HashSet<>();
+        
+        for(int i : arr){
+            if(!uniqueSet.add(i))
+            System.out.println("Array contains duplicate elements");
+            else
+                System.out.println("Array doesnt not contains duplicate");
+        }
+      
+   }
+}
+#Brute force
+
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+       
+        int[] arr = {1,2,2,3,4,5,6};
+        
+        for(int i=0;i<arr.length;i++){
+            for(int j=i+1;j<arr.length;j++)
+            {
+                if(arr[i]==arr[j])
+                    System.out.println("Array contains duplicate elements");
+                    break;
+            }
+        }
+    }
+}
+
+#java 8
+
+import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+class HelloWorld {
+    public static void main(String[] args) {
+       
+        int[] arr = {1,2,2,3,4,5,6,6};
+        
+        Set<Integer> uniqueSet = new HashSet<>();
+        
+       
+     Set<Integer>  duplicateElements = Arrays.stream(arr).filter(i->!uniqueSet.add(i)).boxed().collect(Collectors.toSet());
+     
+     System.out.println(duplicateElements);
+   
+    }
+}
 
 
 ```
