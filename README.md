@@ -95,3 +95,45 @@ class HelloWorld {
         
     }
 }
+5) How do you check the equality of two arrays in Java?
+
+One more favorite topic of many interviewers is array. You will face many Java coding interview questions related to array. In this program, you will learn how to check the equality of two arrays using different methods. [Solution
+```java
+#Iterative method
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+       
+        int[] arrayOne = {2, 5, 1, 7, 4};
+        int[] arrayTwo = {2, 5, 1, 7, 4};
+        
+        boolean equal = true;
+        
+        for(int i=0;i<arrayOne.length;i++)
+        {
+              if(arrayOne[i]!=arrayTwo[i])
+                equal = false;
+        }
+        if(equal)
+            System.out.println("Arrays are equal");
+        else
+            System.out.println("Arrays are not equal");
+   }
+}
+
+#Using Arrays.equals()
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+       
+        int[] arrayOne = {2, 6, 1, 7, 4};
+        int[] arrayTwo = {2, 5, 1, 7, 4};
+        
+        if(Arrays.equals(arrayOne,arrayTwo))
+            System.out.println("Arrays are equal");
+        else
+            System.out.println("Arrays are not equal");
+   }
+}
+```
