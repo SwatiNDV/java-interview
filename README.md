@@ -21,6 +21,32 @@ class HelloWorld {
     }
 }
 ```
+```java 8
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        String str = "Butter Better";
+        
+        char[] car = str.toCharArray();
+        HashMap<Character,Integer> map = new HashMap<>();
+        for(char c:car){
+            if(map.containsKey(c))
+            {
+             map.put(c,map.get(c)+1);   
+            }
+            else
+                map.put(c,1);
+        }
+        System.out.println(map.entrySet());
+        
+        Set<Character> keySet = map.keySet();
+        for(char c:keySet){
+            if(map.get(c)>1)
+                System.out.print(c+" : "+map.get(c)+"\n");
+        }
+   }
+}
+```
 4) How to find duplicate characters in a string in Java?
 
 Write a Java program to find duplicate characters and their count in a given string. For example, in a string “Better Butter”, duplicate characters and their count is t : 4, e : 3, r : 2 and B : 2. [Solution]
