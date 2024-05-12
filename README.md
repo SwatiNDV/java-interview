@@ -265,11 +265,11 @@ class HelloWorld {
    
     }
 }
-
-
 ```
+
 9) How to find sum of all digits of a number in Java?
-    ```java
+
+```java
     class HelloWorld {
     public static void main(String[] args) {
        
@@ -286,6 +286,7 @@ class HelloWorld {
     }
 }
 ```
+
 10) How to find second largest number in an integer array?
 
 ```java
