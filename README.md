@@ -137,3 +137,72 @@ class HelloWorld {
    }
 }
 ```
+6) Anagram program in Java
+
+Write a Java program to check whether two given strings are anagram or not. Two strings are said to be anagram if they contain same set of characters but in different order. For example, “Mother In Law” and “Hitler Woman” are anagrams. This type of Java programming questions test the coding skills of a candidate. [Solution]
+
+```java
+#using sort() and equals()
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+       
+        String s1 = "Keep";
+        String s2 = "peek";
+        
+        char[] car1 = s1.toUpperCase().toCharArray();
+        char[] car2 = s2.toUpperCase().toCharArray();
+        
+        Arrays.sort(car1);
+        Arrays.sort(car2);
+        
+        if(car1.length == car2.length && Arrays.equals(car1,car2))
+            System.out.println("Anagram");
+        else
+            System.out.println("Not an Anagram");
+   }
+}
+
+#java 8
+
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.function.Function;
+class HelloWorld {
+    public static void main(String[] args) {
+       
+        String str1 = "Keep";
+        String str2 = "peek";
+        
+       if (str1 == null || str2 == null || str1.length() != str2.length()) {
+            System.out.println("Strings are not equal");
+        }
+        str1 = str1.toLowerCase();
+        str2 = str2.toLowerCase();
+
+        Map<Character,Long> charCountMap1 = str1.chars().
+        mapToObj(c->(char)c).
+        collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+
+        Map<Character, Long> charCountMap2 = str2.chars()
+        .mapToObj(c -> (char)c)
+        .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+
+     if(charCountMap1.equals(charCountMap2))
+        System.out.println("Anagram");
+     else
+        System.out.println("Not an Anagram");
+        
+   }
+}
+
+```
+8) How to find duplicate elements in an array?
+
+I think array related programs along with string handling programs are the most asked Java programs in interview. In this program, I have discussed five methods to find duplicate elements in the given array. [Solution]
+```java
+
+
+```
