@@ -285,7 +285,8 @@ class HelloWorld {
    
     }
 }
-```10) How to find second largest number in an integer array?
+```
+10) How to find second largest number in an integer array?
 
 ```java
 class HelloWorld {
