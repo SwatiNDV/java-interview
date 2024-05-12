@@ -268,3 +268,58 @@ class HelloWorld {
 
 
 ```
+9) How to find sum of all digits of a number in Java?
+    ```java
+    class HelloWorld {
+    public static void main(String[] args) {
+       
+       int number = 4201;
+       int sum = 0;
+       while(number>0){
+           int digit = number % 10;
+           sum+=digit;
+           number = number / 10;
+           
+       }
+       System.out.println("Sum of all the digits :"+sum);
+   
+    }
+}
+```10) How to find second largest number in an integer array?
+
+```java
+class HelloWorld {
+    public static void main(String[] args) {
+       
+        int[] arr = {1,3,2,5,4};
+        int arr_size = arr.length;
+        
+        if (arr_size < 2) {
+            System.out.printf(" Invalid Input ");
+            return;
+        }
+        
+        int largest  = Integer.MIN_VALUE;
+        int second   = Integer.MIN_VALUE;
+        
+        for (int i = 0; i < arr_size; i++) {
+            largest = Math.max(largest, arr[i]);
+        }
+        
+        for (int i = 0; i < arr_size; i++) {
+            if (arr[i] != largest)
+                second = Math.max(second, arr[i]);
+        }
+        
+        if (second == Integer.MIN_VALUE)
+            System.out.printf("There is no second "
+                              + "largest element\n");
+        else
+            System.out.printf("The second largest "
+                                  + "element is %d\n",
+                              second);
+    
+     
+    }
+}
+```
