@@ -376,3 +376,29 @@ class HelloWorld {
     }
 }
 ```
+18) How to check whether one string is a rotation of another in Java?
+
+```java
+class HelloWorld {
+    public static void main(String[] args) {
+    
+   String str1 = "StrutsHibernateJavaJ2ee";
+   String str2 = "2eeStrutsHibernateJava";
+   String str3 = "";
+   
+   boolean isRotated = true;
+   
+   if(str1.length()!=str2.length()){
+     System.out.println("Strings are of different length");
+       
+   }
+   else{
+        str3 = str1+str2;
+    if(str3.contains(str2))
+         System.out.println("Str2 is a rotated version of Str1");
+    else
+        System.out.println("Not a rotated version");
+   }
+    }
+}
+```
