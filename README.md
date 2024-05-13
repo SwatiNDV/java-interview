@@ -350,3 +350,29 @@ class HelloWorld {
     }
 }
 ```
+17) How to check whether given number is binary or not?
+
+```java
+class HelloWorld {
+    public static void main(String[] args) {
+    
+    int num = 1010 ;
+    boolean isBinary = true;
+    while(num>0){
+        int digit = num % 10;
+        if(digit > 1)
+        {
+            isBinary = false;
+            break;
+        }
+        else
+            num = num /10;
+  }
+  if(isBinary)
+    System.out.println("Binary");
+  else
+    System.out.println("Not a Binary");
+    
+    }
+}
+```
