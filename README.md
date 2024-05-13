@@ -327,7 +327,8 @@ class HelloWorld {
 ```
 
 16) How to remove duplicate elements from ArrayList in Java?
-    ```java
+    
+```java
     
 class HelloWorld {
     public static void main(String[] args) {
