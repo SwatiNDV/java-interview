@@ -325,3 +325,27 @@ class HelloWorld {
     }
 }
 ```
+
+16) How to remove duplicate elements from ArrayList in Java?
+    ```java
+    
+class HelloWorld {
+    public static void main(String[] args) {
+    
+    ArrayList<String> listD = new ArrayList<>();
+    listD.add("java");
+    listD.add("c");
+    listD.add("python");
+    listD.add("java");
+    listD.add("ruby");
+    listD.add("ruby");
+    System.out.println(listD);
+    
+    Set<String> set = new LinkedHashSet<>(listD);
+    System.out.println(set);
+    
+    ArrayList<String> listUnique = new ArrayList<>(set);
+    System.out.println(listUnique);
+    }
+}
+```
